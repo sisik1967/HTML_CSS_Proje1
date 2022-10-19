@@ -34,8 +34,9 @@
 .navbar ul li{
     list-style: none;
     display: inline-block;
-    margin: 0 8px;
-    line-height: 80px;
+    margin: 30px 20px;
+    /*line-height: 80px;*/
+    position: relative;
 }
 
 .navbar ul li a{
@@ -52,9 +53,26 @@
 .navbar ul li a.active,
 .navbar ul li a:hover{
     background: #ff6e00;
-    border-radius: 2px;
+    border-radius: 8px;
 
 }
+.navbar ul li::after{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+
+
 .container .center{
     position: absolute;
     top: 50%;
@@ -79,23 +97,61 @@
     text-align: center;
 }
 .center .buttons{
-    margin: 35px 280px;
+    margin: 35px 240px;
+    display: inline-block;
 }
 
 .buttons button{
-    height: 50px;
-    width: 150px;
+    /*height: 50px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
     font-size: 18px;
     font-weight: bold;
-    color: #ffb3b3;
-    background: rgb(207,96,88);
-    border: solid 1px red;
+    color: white;
+    background: transparent;
+    border: 2px solid green;
     cursor: pointer;
     border-radius: 25px;
-    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;*/
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid green;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
-.buttons button:hover{
+/*.buttons button:hover{
     background: #fff;
    
+}*/
+span{
+    background-color: tomato;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
 }
 
