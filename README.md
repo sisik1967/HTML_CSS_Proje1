@@ -9,4 +9,4 @@ There is also a welcome greeting on the main page.
 I added a span feature on the list items.
 
 I also added a span feature on the buttons.
-![](My Webpage.gif)
+![]([My%20Webpage.gif])
